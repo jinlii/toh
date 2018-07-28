@@ -1,0 +1,10 @@
+.idea
+node_modules
+
+.DS_Store
+.DS_Store?
+
+**/*.ngsummary.json
+**/*.shim.ngstyle.ts
+**/*.css.ngstyle.ts
+**/*.ngfactory.ts

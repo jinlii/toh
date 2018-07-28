@@ -20,6 +20,7 @@ export class HeroService {
     private http: HttpClient,
     private messageService: MessageService) { }
 
+// uses InMemoryDataService to stage data
   /** GET heroes from the server */
   getHeroes (): Observable<Hero[]> {
     return this.http.get<Hero[]>(this.heroesUrl)
@@ -46,7 +47,7 @@ export class HeroService {
   /** GET hero by id. Will 404 if id not found */
   getHero(id: number): Observable<Hero> {
     const url = `${this.heroesUrl}/${id}`;
-    return this.http.get<Hero>(url).pipe(
+    return this.http.get<Hero>(url).pipe( // how does it know to get api/heroes/id??
       tap(_ => this.log(`fetched hero id=${id}`)),
       catchError(this.handleError<Hero>(`getHero id=${id}`))
     );

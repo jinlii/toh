@@ -33,6 +33,7 @@ export class HeroDetailComponent implements OnInit {
     this.location.back();
   }
 
+// api/heroes to a method with no return 
  save(): void {
     this.heroService.updateHero(this.hero)
       .subscribe(() => this.goBack());

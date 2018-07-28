@@ -21,6 +21,21 @@ import { MessagesComponent }    from './messages/messages.component';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    /*
+    https://github.com/angular/in-memory-web-api
+
+    This in-memory web api service processes an HTTP request and returns an Observable of HTTP Response object in the manner of a RESTy web api. It natively handles URI patterns in the form :base/:collectionName/:id?
+
+    Examples:
+
+      // for requests to an `api` base URL that gets heroes from a 'heroes' collection
+      GET api/heroes          // all heroes
+      GET api/heroes/42       // the hero with id=42
+      GET api/heroes?name=^j  // 'j' is a regex; returns heroes whose name starting with 'j' or 'J'
+      GET api/heroes.json/42  // ignores the ".json"
+
+
+    */
 
     // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
     // and returns simulated server responses.
