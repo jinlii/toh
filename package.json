@@ -9,7 +9,11 @@
     "test": "ng test",
     "build": "ng build --prod",
     "e2e": "ng e2e",
-    "ng": "ng"
+    "ng": "ng",
+    "build:ssr": "npm run build:client-and-server-bundles && npm run webpack:server",
+    "serve:ssr": "node dist/server",
+    "build:client-and-server-bundles": "ng build --prod && ng run angular.io-example:server",
+    "webpack:server": "webpack --config webpack.server.config.js --progress --colors"
   },
   "keywords": [],
   "author": "",
@@ -54,7 +58,8 @@
     "protractor": "~5.3.0",
     "ts-node": "^5.0.1",
     "tslint": "^5.9.1",
-    "typescript": "2.7.2"
+    "typescript": "2.7.2",
+    "webpack-cli": "^3.1.0"
   },
   "repository": {}
 }

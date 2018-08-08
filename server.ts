@@ -3,7 +3,7 @@ import 'zone.js/dist/zone-node';
 import 'reflect-metadata';
 
 import { enableProdMode } from '@angular/core';
-
+// the server is a typescript application
 // An Express server is a pipeline of middleware that filters and processes URL requests one after the other.
 import * as express from 'express';
 import { join } from 'path';
